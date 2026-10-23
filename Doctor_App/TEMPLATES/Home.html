@@ -1,0 +1,45 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if messages %}
+  {% for message in messages %}
+    {% if message.tags %}
+      <script>alert("{{ message }}")</script>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div style="
+  background-image: url('/media/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 658px;
+  width: 100%;
+  position: relative;
+">
+
+  <!-- Page Title -->
+  <h1 class="H" style="color: white; padding: 30px;">
+    Homess
+  </h1>
+
+  <!-- Customer Care Box -->
+  <div style="
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+  ">
+    📞 <strong>Customer Care</strong><br>
+    +91 98765 43210
+  </div>
+
+</div>
+
+{% endblock %}
